@@ -1,0 +1,3098 @@
+[
+  {
+    "code": "C0102",
+    "name": "blacklisted-name",
+    "message": "Black listed name \"%s\"",
+    "description": "Used when the name is listed in the black list (unauthorized names).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0103",
+    "name": "invalid-name",
+    "message": "%s name \"%s\" doesn't conform to %s",
+    "description": "Used when the name doesn't conform to naming rules associated to its type (constant, variable, class...).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0112",
+    "name": "empty-docstring",
+    "message": "Empty %s docstring",
+    "description": "Used when a module, function, class or method has an empty docstring (it would be too easy ;).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0113",
+    "name": "unneeded-not",
+    "message": "Consider changing \"%s\" to \"%s\"",
+    "description": "Used when a boolean expression contains an unneeded negation.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0114",
+    "name": "missing-module-docstring",
+    "message": "Missing module docstring",
+    "description": "Used when a module has no docstring.Empty modules do not require a docstring.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0115",
+    "name": "missing-class-docstring",
+    "message": "Missing class docstring",
+    "description": "Used when a class has no docstring.Even an empty class must have a docstring.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0116",
+    "name": "missing-function-docstring",
+    "message": "Missing function or method docstring",
+    "description": "Used when a function or method has no docstring.Some special methods like __init__ do not require a docstring.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0121",
+    "name": "singleton-comparison",
+    "message": "Comparison to %s should be %s",
+    "description": "Used when an expression is compared to singleton values like True, False or None.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0122",
+    "name": "misplaced-comparison-constant",
+    "message": "Comparison should be %s",
+    "description": "Used when the constant is placed on the left side of a comparison. It is usually clearer in intent to place it in the right hand side of the comparison.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0123",
+    "name": "unidiomatic-typecheck",
+    "message": "Using type() instead of isinstance() for a typecheck.",
+    "description": "The idiomatic way to perform an explicit typecheck in Python is to use isinstance(x, Y) rather than type(x) == Y, type(x) is Y. Though there are unusual situations where these give different results.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0200",
+    "name": "consider-using-enumerate",
+    "message": "Consider using enumerate instead of iterating with range and len",
+    "description": "Emitted when code that iterates with range and len is encountered. Such code can be simplified by using the enumerate builtin.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0201",
+    "name": "consider-iterating-dictionary",
+    "message": "Consider iterating the dictionary directly instead of calling .keys()",
+    "description": "Emitted when the keys of a dictionary are iterated through the .keys() method. It is enough to just iterate through the dictionary itself, as in \"for key in dictionary\".",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0202",
+    "name": "bad-classmethod-argument",
+    "message": "Class method %s should have %s as first argument",
+    "description": "Used when a class method has a first argument named differently than the value specified in valid-classmethod-first-arg option (default to \"cls\"), recommended to easily differentiate them from regular instance methods.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0203",
+    "name": "bad-mcs-method-argument",
+    "message": "Metaclass method %s should have %s as first argument",
+    "description": "Used when a metaclass method has a first argument named differently than the value specified in valid-classmethod-first-arg option (default to \"cls\"), recommended to easily differentiate them from regular instance methods.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0204",
+    "name": "bad-mcs-classmethod-argument",
+    "message": "Metaclass class method %s should have %s as first argument",
+    "description": "Used when a metaclass class method has a first argument named differently than the value specified in valid-metaclass-classmethod-first-arg option (default to \"mcs\"), recommended to easily differentiate them from regular instance methods.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0205",
+    "name": "single-string-used-for-slots",
+    "message": "Class __slots__ should be a non-string iterable",
+    "description": "Used when a class __slots__ is a simple string, rather than an iterable.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0301",
+    "name": "line-too-long",
+    "message": "Line too long (%s/%s)",
+    "description": "Used when a line is longer than a given number of characters.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0302",
+    "name": "too-many-lines",
+    "message": "Too many lines in module (%s/%s)",
+    "description": "Used when a module has too many lines, reducing its readability.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0303",
+    "name": "trailing-whitespace",
+    "message": "Trailing whitespace",
+    "description": "Used when there is whitespace between the end of a line and the newline.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0304",
+    "name": "missing-final-newline",
+    "message": "Final newline missing",
+    "description": "Used when the last line in a file is missing a newline.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0305",
+    "name": "trailing-newlines",
+    "message": "Trailing newlines",
+    "description": "Used when there are trailing blank lines in a file.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0321",
+    "name": "multiple-statements",
+    "message": "More than one statement on a single line",
+    "description": "Used when more than on statement are found on the same line.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0325",
+    "name": "superfluous-parens",
+    "message": "Unnecessary parens after %r keyword",
+    "description": "Used when a single item in parentheses follows an if, for, or other keyword.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0326",
+    "name": "bad-whitespace",
+    "message": "%s space %s %s %s",
+    "description": "Used when a wrong number of spaces is used around an operator, bracket or block opener.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0327",
+    "name": "mixed-line-endings",
+    "message": "Mixed line endings LF and CRLF",
+    "description": "Used when there are mixed (LF and CRLF) newline signs in a file.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0328",
+    "name": "unexpected-line-ending-format",
+    "message": "Unexpected line ending format. There is '%s' while it should be '%s'.",
+    "description": "Used when there is different newline than expected.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0330",
+    "name": "bad-continuation",
+    "message": "Wrong %s indentation%s%s.",
+    "description": "TODO",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0401",
+    "name": "wrong-spelling-in-comment",
+    "message": "Wrong spelling of a word '%s' in a comment:",
+    "description": "Used when a word in comment is not spelled correctly.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0402",
+    "name": "wrong-spelling-in-docstring",
+    "message": "Wrong spelling of a word '%s' in a docstring:",
+    "description": "Used when a word in docstring is not spelled correctly.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0403",
+    "name": "invalid-characters-in-docstring",
+    "message": "Invalid characters %r in a docstring",
+    "description": "Used when a word in docstring cannot be checked by enchant.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0410",
+    "name": "multiple-imports",
+    "message": "Multiple imports on one line (%s)",
+    "description": "Used when import statement importing multiple modules is detected.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0411",
+    "name": "wrong-import-order",
+    "message": "%s should be placed before %s",
+    "description": "Used when PEP8 import order is not respected (standard imports first, then third-party libraries, then local imports)",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0412",
+    "name": "ungrouped-imports",
+    "message": "Imports from package %s are not grouped",
+    "description": "Used when imports are not grouped by packages",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0413",
+    "name": "wrong-import-position",
+    "message": "Import \"%s\" should be placed at the top of the module",
+    "description": "Used when code and imports are mixed",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0414",
+    "name": "useless-import-alias",
+    "message": "Import alias does not rename original package",
+    "description": "Used when an import alias is same as original package.e.g using import numpy as numpy instead of import numpy as np",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C0415",
+    "name": "import-outside-toplevel",
+    "message": "Import outside toplevel (%s)",
+    "description": "Used when an import statement is used anywhere other than the module toplevel. Move this import to the top of the file.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "C1801",
+    "name": "len-as-condition",
+    "message": "Do not use `len(SEQUENCE)` without comparison to determine if a sequence is empty",
+    "description": "Used when Pylint detects that len(sequence) is being used without explicit comparison inside a condition to determine if a sequence is empty. Instead of coercing the length to a boolean, either rely on the fact that empty sequences are false or compare the length against a scalar.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0001",
+    "name": "syntax-error",
+    "message": null,
+    "description": "Used when a syntax error is raised for a module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0011",
+    "name": "unrecognized-inline-option",
+    "message": "Unrecognized file option %r",
+    "description": "Used when an unknown inline option is encountered.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0012",
+    "name": "bad-option-value",
+    "message": "Bad option value %r",
+    "description": "Used when a bad value for an inline option is encountered.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0100",
+    "name": "init-is-generator",
+    "message": "__init__ method is a generator",
+    "description": "Used when the special class method __init__ is turned into a generator by a yield in its body.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0101",
+    "name": "return-in-init",
+    "message": "Explicit return in __init__",
+    "description": "Used when the special class method __init__ has an explicit return value.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0102",
+    "name": "function-redefined",
+    "message": "%s already defined line %s",
+    "description": "Used when a function / class / method is redefined.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0103",
+    "name": "not-in-loop",
+    "message": "%r not properly in loop",
+    "description": "Used when break or continue keywords are used outside a loop.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0104",
+    "name": "return-outside-function",
+    "message": "Return outside function",
+    "description": "Used when a \"return\" statement is found outside a function or method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0105",
+    "name": "yield-outside-function",
+    "message": "Yield outside function",
+    "description": "Used when a \"yield\" statement is found outside a function or method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0107",
+    "name": "nonexistent-operator",
+    "message": "Use of the non-existent %s operator",
+    "description": "Used when you attempt to use the C-style pre-increment or pre-decrement operator -- and ++, which doesn't exist in Python.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0108",
+    "name": "duplicate-argument-name",
+    "message": "Duplicate argument name %s in function definition",
+    "description": "Duplicate argument names in function definitions are syntax errors.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0110",
+    "name": "abstract-class-instantiated",
+    "message": "Abstract class %r with abstract methods instantiated",
+    "description": "Used when an abstract class with `abc.ABCMeta` as metaclass has abstract methods and is instantiated.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0111",
+    "name": "bad-reversed-sequence",
+    "message": "The first reversed() argument is not a sequence",
+    "description": "Used when the first argument to reversed() builtin isn't a sequence (does not implement __reversed__, nor __getitem__ and __len__",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0112",
+    "name": "too-many-star-expressions",
+    "message": "More than one starred expression in assignment",
+    "description": "Emitted when there are more than one starred expressions (`*x`) in an assignment. This is a SyntaxError.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0113",
+    "name": "invalid-star-assignment-target",
+    "message": "Starred assignment target must be in a list or tuple",
+    "description": "Emitted when a star expression is used as a starred assignment target.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0114",
+    "name": "star-needs-assignment-target",
+    "message": "Can use starred expression only in assignment target",
+    "description": "Emitted when a star expression is not used in an assignment target.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0115",
+    "name": "nonlocal-and-global",
+    "message": "Name %r is nonlocal and global",
+    "description": "Emitted when a name is both nonlocal and global.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0116",
+    "name": "continue-in-finally",
+    "message": "'continue' not supported inside 'finally' clause",
+    "description": "Emitted when the `continue` keyword is found inside a finally clause, which is a SyntaxError.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0117",
+    "name": "nonlocal-without-binding",
+    "message": "nonlocal name %s found without binding",
+    "description": "Emitted when a nonlocal variable does not have an attached name somewhere in the parent scopes",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0118",
+    "name": "used-prior-global-declaration",
+    "message": "Name %r is used prior to global declaration",
+    "description": "Emitted when a name is used prior a global declaration, which results in an error since Python 3.6. This message can't be emitted when using Python < 3.6.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0119",
+    "name": "misplaced-format-function",
+    "message": "format function is not called on str",
+    "description": "Emitted when format function is not called on str object. e.g doing print(\"value: {}\").format(123) instead of print(\"value: {}\".format(123)). This might not be what the user intended to do.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0202",
+    "name": "method-hidden",
+    "message": "An attribute defined in %s line %s hides this method",
+    "description": "Used when a class defines a method which is hidden by an instance attribute from an ancestor class or set by some client code.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0203",
+    "name": "access-member-before-definition",
+    "message": "Access to member %r before its definition line %s",
+    "description": "Used when an instance member is accessed before it's actually assigned.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0211",
+    "name": "no-method-argument",
+    "message": "Method has no argument",
+    "description": "Used when a method which should have the bound instance as first argument has no argument defined.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0213",
+    "name": "no-self-argument",
+    "message": "Method should have \"self\" as first argument",
+    "description": "Used when a method has an attribute different the \"self\" as first argument. This is considered as an error since this is a so common convention that you shouldn't break it!",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0236",
+    "name": "invalid-slots-object",
+    "message": "Invalid object %r in __slots__, must contain only non empty strings",
+    "description": "Used when an invalid (non-string) object occurs in __slots__.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0237",
+    "name": "assigning-non-slot",
+    "message": "Assigning to attribute %r not defined in class slots",
+    "description": "Used when assigning to an attribute not defined in the class slots.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0238",
+    "name": "invalid-slots",
+    "message": "Invalid __slots__ object",
+    "description": "Used when an invalid __slots__ is found in class. Only a string, an iterable or a sequence is permitted.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0239",
+    "name": "inherit-non-class",
+    "message": "Inheriting %r, which is not a class.",
+    "description": "Used when a class inherits from something which is not a class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0240",
+    "name": "inconsistent-mro",
+    "message": "Inconsistent method resolution order for class %r",
+    "description": "Used when a class has an inconsistent method resolution order.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0241",
+    "name": "duplicate-bases",
+    "message": "Duplicate bases for class %r",
+    "description": "Used when a class has duplicate bases.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0242",
+    "name": "class-variable-slots-conflict",
+    "message": "Value %r in slots conflicts with class variable",
+    "description": "Used when a value in __slots__ conflicts with a class variable, property or method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0301",
+    "name": "non-iterator-returned",
+    "message": "__iter__ returns non-iterator",
+    "description": "Used when an __iter__ method returns something which is not an iterable (i.e. has no `__next__` method)",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0302",
+    "name": "unexpected-special-method-signature",
+    "message": "The special method %r expects %s param(s), %d %s given",
+    "description": "Emitted when a special method was defined with an invalid number of parameters. If it has too few or too many, it might not work at all.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0303",
+    "name": "invalid-length-returned",
+    "message": "__len__ does not return non-negative integer",
+    "description": "Used when a __len__ method returns something which is not a non-negative integer",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0401",
+    "name": "import-error",
+    "message": "Unable to import %s",
+    "description": "Used when pylint has been unable to import a module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0402",
+    "name": "relative-beyond-top-level",
+    "message": "Attempted relative import beyond top-level package",
+    "description": "Used when a relative import tries to access too many levels in the current package.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0601",
+    "name": "used-before-assignment",
+    "message": "Using variable %r before assignment",
+    "description": "Used when a local variable is accessed before its assignment.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0602",
+    "name": "undefined-variable",
+    "message": "Undefined variable %r",
+    "description": "Used when an undefined variable is accessed.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0603",
+    "name": "undefined-all-variable",
+    "message": "Undefined variable name %r in __all__",
+    "description": "Used when an undefined variable name is referenced in __all__.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0604",
+    "name": "invalid-all-object",
+    "message": "Invalid object %r in __all__, must contain only strings",
+    "description": "Used when an invalid (non-string) object occurs in __all__.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0611",
+    "name": "no-name-in-module",
+    "message": "No name %r in module %r",
+    "description": "Used when a name cannot be found in a module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0633",
+    "name": "unpacking-non-sequence",
+    "message": "Attempting to unpack a non-sequence%s",
+    "description": "Used when something which is not a sequence is used in an unpack assignment",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0701",
+    "name": "bad-except-order",
+    "message": "Bad except clauses order (%s)",
+    "description": "Used when except clauses are not in the correct order (from the more specific to the more generic). If you don't fix the order, some exceptions may not be caught by the most specific handler.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0702",
+    "name": "raising-bad-type",
+    "message": "Raising %s while only classes or instances are allowed",
+    "description": "Used when something which is neither a class, an instance or a string is raised (i.e. a `TypeError` will be raised).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0703",
+    "name": "bad-exception-context",
+    "message": "Exception context set to something which is not an exception, nor None",
+    "description": "Used when using the syntax \"raise ... from ...\", where the exception context is not an exception, nor None.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0704",
+    "name": "misplaced-bare-raise",
+    "message": "The raise statement is not inside an except clause",
+    "description": "Used when a bare raise is not used inside an except clause. This generates an error, since there are no active exceptions to be reraised. An exception to this rule is represented by a bare raise inside a finally clause, which might work, as long as an exception is raised inside the try block, but it is nevertheless a code smell that must not be relied upon.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0710",
+    "name": "raising-non-exception",
+    "message": "Raising a new style class which doesn't inherit from BaseException",
+    "description": "Used when a new style class which doesn't inherit from BaseException is raised.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0711",
+    "name": "notimplemented-raised",
+    "message": "NotImplemented raised - should raise NotImplementedError",
+    "description": "Used when NotImplemented is raised instead of NotImplementedError",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E0712",
+    "name": "catching-non-exception",
+    "message": "Catching an exception which doesn't inherit from Exception: %s",
+    "description": "Used when a class which doesn't inherit from Exception is used as an exception in an except clause.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1003",
+    "name": "bad-super-call",
+    "message": "Bad first argument %r given to super()",
+    "description": "Used when another argument than the current class is given as first argument of the super builtin.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1101",
+    "name": "no-member",
+    "message": "%s %r has no %r member%s",
+    "description": "Used when a variable is accessed for an unexistent member.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1102",
+    "name": "not-callable",
+    "message": "%s is not callable",
+    "description": "Used when an object being called has been inferred to a non callable object.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1111",
+    "name": "assignment-from-no-return",
+    "message": "Assigning result of a function call, where the function has no return",
+    "description": "Used when an assignment is done on a function call but the inferred function doesn't return anything.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1120",
+    "name": "no-value-for-parameter",
+    "message": "No value for argument %s in %s call",
+    "description": "Used when a function call passes too few arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1121",
+    "name": "too-many-function-args",
+    "message": "Too many positional arguments for %s call",
+    "description": "Used when a function call passes too many positional arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1123",
+    "name": "unexpected-keyword-arg",
+    "message": "Unexpected keyword argument %r in %s call",
+    "description": "Used when a function call passes a keyword argument that doesn't correspond to one of the function's parameter names.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1124",
+    "name": "redundant-keyword-arg",
+    "message": "Argument %r passed by position and keyword in %s call",
+    "description": "Used when a function call would result in assigning multiple values to a function parameter, one value from a positional argument and one from a keyword argument.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1125",
+    "name": "missing-kwoa",
+    "message": "Missing mandatory keyword argument %r in %s call",
+    "description": "Used when a function call does not pass a mandatory keyword-only argument.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1126",
+    "name": "invalid-sequence-index",
+    "message": "Sequence index is not an int, slice, or instance with __index__",
+    "description": "Used when a sequence type is indexed with an invalid type. Valid types are ints, slices, and objects with an __index__ method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1127",
+    "name": "invalid-slice-index",
+    "message": "Slice index is not an int, None, or instance with __index__",
+    "description": "Used when a slice index is not an integer, None, or an object with an __index__ method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1128",
+    "name": "assignment-from-none",
+    "message": "Assigning result of a function call, where the function returns None",
+    "description": "Used when an assignment is done on a function call but the inferred function returns nothing but None.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1129",
+    "name": "not-context-manager",
+    "message": "Context manager '%s' doesn't implement __enter__ and __exit__.",
+    "description": "Used when an instance in a with statement doesn't implement the context manager protocol(__enter__/__exit__).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1130",
+    "name": "invalid-unary-operand-type",
+    "message": null,
+    "description": "Emitted when a unary operand is used on an object which does not support this type of operation.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1131",
+    "name": "unsupported-binary-operation",
+    "message": null,
+    "description": "Emitted when a binary arithmetic operation between two operands is not supported.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1132",
+    "name": "repeated-keyword",
+    "message": "Got multiple values for keyword argument %r in function call",
+    "description": "Emitted when a function call got multiple values for a keyword.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1133",
+    "name": "not-an-iterable",
+    "message": "Non-iterable value %s is used in an iterating context",
+    "description": "Used when a non-iterable value is used in place where iterable is expected",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1134",
+    "name": "not-a-mapping",
+    "message": "Non-mapping value %s is used in a mapping context",
+    "description": "Used when a non-mapping value is used in place where mapping is expected",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1135",
+    "name": "unsupported-membership-test",
+    "message": "Value '%s' doesn't support membership test",
+    "description": "Emitted when an instance in membership test expression doesn't implement membership protocol (__contains__/__iter__/__getitem__).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1136",
+    "name": "unsubscriptable-object",
+    "message": "Value '%s' is unsubscriptable",
+    "description": "Emitted when a subscripted value doesn't support subscription (i.e. doesn't define __getitem__ method or __class_getitem__ for a class).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1137",
+    "name": "unsupported-assignment-operation",
+    "message": "%r does not support item assignment",
+    "description": "Emitted when an object does not support item assignment (i.e. doesn't define __setitem__ method).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1138",
+    "name": "unsupported-delete-operation",
+    "message": "%r does not support item deletion",
+    "description": "Emitted when an object does not support item deletion (i.e. doesn't define __delitem__ method).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1139",
+    "name": "invalid-metaclass",
+    "message": "Invalid metaclass %r used",
+    "description": "Emitted whenever we can detect that a class is using, as a metaclass, something which might be invalid for using as a metaclass.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1140",
+    "name": "unhashable-dict-key",
+    "message": "Dict key is unhashable",
+    "description": "Emitted when a dict key is not hashable (i.e. doesn't define __hash__ method).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1141",
+    "name": "dict-iter-missing-items",
+    "message": "Unpacking a dictionary in iteration without calling .items()",
+    "description": "Emitted when trying to iterate through a dict without calling .items()",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1200",
+    "name": "logging-unsupported-format",
+    "message": "Unsupported logging format character %r (%#02x) at index %d",
+    "description": "Used when an unsupported format character is used in a logging statement format string.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1201",
+    "name": "logging-format-truncated",
+    "message": "Logging format string ends in middle of conversion specifier",
+    "description": "Used when a logging statement format string terminates before the end of a conversion specifier.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1205",
+    "name": "logging-too-many-args",
+    "message": "Too many arguments for logging format string",
+    "description": "Used when a logging format string is given too many arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1206",
+    "name": "logging-too-few-args",
+    "message": "Not enough arguments for logging format string",
+    "description": "Used when a logging format string is given too few arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1300",
+    "name": "bad-format-character",
+    "message": "Unsupported format character %r (%#02x) at index %d",
+    "description": "Used when an unsupported format character is used in a format string.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1301",
+    "name": "truncated-format-string",
+    "message": "Format string ends in middle of conversion specifier",
+    "description": "Used when a format string terminates before the end of a conversion specifier.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1302",
+    "name": "mixed-format-string",
+    "message": "Mixing named and unnamed conversion specifiers in format string",
+    "description": "Used when a format string contains both named (e.g. '%(foo)d') and unnamed (e.g. '%d') conversion specifiers. This is also used when a named conversion specifier contains * for the minimum field width and/or precision.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1303",
+    "name": "format-needs-mapping",
+    "message": "Expected mapping for format string, not %s",
+    "description": "Used when a format string that uses named conversion specifiers is used with an argument that is not a mapping.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1304",
+    "name": "missing-format-string-key",
+    "message": "Missing key %r in format string dictionary",
+    "description": "Used when a format string that uses named conversion specifiers is used with a dictionary that doesn't contain all the keys required by the format string.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1305",
+    "name": "too-many-format-args",
+    "message": "Too many arguments for format string",
+    "description": "Used when a format string that uses unnamed conversion specifiers is given too many arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1306",
+    "name": "too-few-format-args",
+    "message": "Not enough arguments for format string",
+    "description": "Used when a format string that uses unnamed conversion specifiers is given too few arguments",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1307",
+    "name": "bad-string-format-type",
+    "message": "Argument %r does not match format type %r",
+    "description": "Used when a type required by format string is not suitable for actual argument type",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1310",
+    "name": "bad-str-strip-call",
+    "message": "Suspicious argument in %s.%s call",
+    "description": "The argument to a str.{l,r,}strip call contains a duplicate character,",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1507",
+    "name": "invalid-envvar-value",
+    "message": "%s does not support %s type argument",
+    "description": "Env manipulation functions support only string type arguments. See https://docs.python.org/3/library/os.html#os.getenv.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1601",
+    "name": "print-statement",
+    "message": "print statement used",
+    "description": "Used when a print statement is used (`print` is a function in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1602",
+    "name": "parameter-unpacking",
+    "message": "Parameter unpacking specified",
+    "description": "Used when parameter unpacking is specified for a function(Python 3 doesn't allow it)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1603",
+    "name": "unpacking-in-except",
+    "message": "Implicit unpacking of exceptions is not supported in Python 3",
+    "description": "Python3 will not allow implicit unpacking of exceptions in except clauses. See http://www.python.org/dev/peps/pep-3110/",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1604",
+    "name": "old-raise-syntax",
+    "message": "Use raise ErrorClass(args) instead of raise ErrorClass, args.",
+    "description": "Used when the alternate raise syntax 'raise foo, bar' is used instead of 'raise foo(bar)'.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1605",
+    "name": "backtick",
+    "message": "Use of the `` operator",
+    "description": "Used when the deprecated \"``\" (backtick) operator is used instead of the str() function.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1700",
+    "name": "yield-inside-async-function",
+    "message": "Yield inside async function",
+    "description": "Used when an `yield` or `yield from` statement is found inside an async function. This message can't be emitted when using Python < 3.5.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1701",
+    "name": "not-async-context-manager",
+    "message": "Async context manager '%s' doesn't implement __aenter__ and __aexit__.",
+    "description": "Used when an async context manager is used with an object that does not implement the async context management protocol. This message can't be emitted when using Python < 3.5.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "F0001",
+    "name": "fatal",
+    "message": null,
+    "description": "Used when an error occurred preventing the analysis of a module (unable to find it for instance).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "F0002",
+    "name": "astroid-error",
+    "message": "%s: %s",
+    "description": "Used when an unexpected error occurred while building the Astroid representation. This is usually accompanied by a traceback. Please report such errors !",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "F0010",
+    "name": "parse-error",
+    "message": "error while code parsing: %s",
+    "description": "Used when an exception occurred while building the Astroid representation which could be handled by astroid.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "F0202",
+    "name": "method-check-failed",
+    "message": "Unable to check methods signature (%s / %s)",
+    "description": "Used when Pylint has been unable to check methods signature compatibility for an unexpected reason. Please report this kind if you don't make sense of it.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0001",
+    "name": "raw-checker-failed",
+    "message": "Unable to run raw checkers on built-in module %s",
+    "description": "Used to inform that a built-in module has not been checked using the raw checkers.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0010",
+    "name": "bad-inline-option",
+    "message": "Unable to consider inline option %r",
+    "description": "Used when an inline option is either badly formatted or can't be used inside modules.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0011",
+    "name": "locally-disabled",
+    "message": "Locally disabling %s (%s)",
+    "description": "Used when an inline option disables a message or a messages category.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0013",
+    "name": "file-ignored",
+    "message": "Ignoring entire file",
+    "description": "Used to inform that the file will not be checked",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0020",
+    "name": "suppressed-message",
+    "message": "Suppressed %s (from line %d)",
+    "description": "A message was triggered on a line, but suppressed explicitly by a disable= comment in the file. This message is not generated for messages that are ignored due to configuration settings.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0021",
+    "name": "useless-suppression",
+    "message": "Useless suppression of %s",
+    "description": "Reported when a message is explicitly disabled for a line or a block of code, but never triggered.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0022",
+    "name": "deprecated-pragma",
+    "message": "Pragma \"%s\" is deprecated, use \"%s\" instead",
+    "description": "Some inline pylint options have been renamed or reworked, only the most recent form should be used. NOTE:skip-all is only available with pylint >= 0.26",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I0023",
+    "name": "use-symbolic-message-instead",
+    "message": null,
+    "description": "Used when a message is enabled or disabled by id.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "I1101",
+    "name": "c-extension-no-member",
+    "message": "%s %r has no %r member%s, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects.",
+    "description": "Used when a variable is accessed for non-existent member of C extension. Due to unavailability of source static analysis is impossible, but it may be performed by introspecting living objects in run-time.",
+    "disabled_by_default": false,
+    "enabled_by_default": true,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0123",
+    "name": "literal-comparison",
+    "message": "Comparison to literal",
+    "description": "Used when comparing an object to a literal, which is usually what you do not want to do, since you can compare to a different literal than what was expected altogether.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0124",
+    "name": "comparison-with-itself",
+    "message": "Redundant comparison - %s",
+    "description": "Used when something is compared against itself.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0201",
+    "name": "no-self-use",
+    "message": "Method could be a function",
+    "description": "Used when a method doesn't use its bound instance, and so could be written as a function.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0202",
+    "name": "no-classmethod-decorator",
+    "message": "Consider using a decorator instead of calling classmethod",
+    "description": "Used when a class method is defined without using the decorator syntax.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0203",
+    "name": "no-staticmethod-decorator",
+    "message": "Consider using a decorator instead of calling staticmethod",
+    "description": "Used when a static method is defined without using the decorator syntax.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0205",
+    "name": "useless-object-inheritance",
+    "message": "Class %r inherits from object, can be safely removed from bases in python3",
+    "description": "Used when a class inherit from object, which under python3 is implicit, hence can be safely removed from bases.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0206",
+    "name": "property-with-parameters",
+    "message": "Cannot have defined parameters for properties",
+    "description": "Used when we detect that a property also has parameters, which are useless, given that properties cannot be called with additional arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0401",
+    "name": "cyclic-import",
+    "message": "Cyclic import (%s)",
+    "description": "Used when a cyclic import between two or more modules is detected.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0801",
+    "name": "duplicate-code",
+    "message": "Similar lines in %s files",
+    "description": "Indicates that a set of similar lines has been detected among multiple file. This usually means that the code should be refactored to avoid this duplication.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0901",
+    "name": "too-many-ancestors",
+    "message": "Too many ancestors (%s/%s)",
+    "description": "Used when class has too many parent classes, try to reduce this to get a simpler (and so easier to use) class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0902",
+    "name": "too-many-instance-attributes",
+    "message": "Too many instance attributes (%s/%s)",
+    "description": "Used when class has too many instance attributes, try to reduce this to get a simpler (and so easier to use) class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0903",
+    "name": "too-few-public-methods",
+    "message": "Too few public methods (%s/%s)",
+    "description": "Used when class has too few public methods, so be sure it's really worth it.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0904",
+    "name": "too-many-public-methods",
+    "message": "Too many public methods (%s/%s)",
+    "description": "Used when class has too many public methods, try to reduce this to get a simpler (and so easier to use) class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0911",
+    "name": "too-many-return-statements",
+    "message": "Too many return statements (%s/%s)",
+    "description": "Used when a function or method has too many return statement, making it hard to follow.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0912",
+    "name": "too-many-branches",
+    "message": "Too many branches (%s/%s)",
+    "description": "Used when a function or method has too many branches, making it hard to follow.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0913",
+    "name": "too-many-arguments",
+    "message": "Too many arguments (%s/%s)",
+    "description": "Used when a function or method takes too many arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0914",
+    "name": "too-many-locals",
+    "message": "Too many local variables (%s/%s)",
+    "description": "Used when a function or method has too many local variables.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0915",
+    "name": "too-many-statements",
+    "message": "Too many statements (%s/%s)",
+    "description": "Used when a function or method has too many statements. You should then split it in smaller functions / methods.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R0916",
+    "name": "too-many-boolean-expressions",
+    "message": "Too many boolean expressions in if statement (%s/%s)",
+    "description": "Used when an if statement contains too many boolean expressions.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1701",
+    "name": "consider-merging-isinstance",
+    "message": "Consider merging these isinstance calls to isinstance(%s, (%s))",
+    "description": "Used when multiple consecutive isinstance calls can be merged into one.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1702",
+    "name": "too-many-nested-blocks",
+    "message": "Too many nested blocks (%s/%s)",
+    "description": "Used when a function or a method has too many nested blocks. This makes the code less understandable and maintainable.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1703",
+    "name": "simplifiable-if-statement",
+    "message": "The if statement can be replaced with %s",
+    "description": "Used when an if statement can be replaced with 'bool(test)'.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1704",
+    "name": "redefined-argument-from-local",
+    "message": "Redefining argument with the local name %r",
+    "description": "Used when a local name is redefining an argument, which might suggest a potential error. This is taken in account only for a handful of name binding operations, such as for iteration, with statement assignment and exception handler assignment.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1705",
+    "name": "no-else-return",
+    "message": "Unnecessary \"%s\" after \"return\"",
+    "description": "Used in order to highlight an unnecessary block of code following an if containing a return statement. As such, it will warn when it encounters an else following a chain of ifs, all of them containing a return statement.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1706",
+    "name": "consider-using-ternary",
+    "message": "Consider using ternary (%s)",
+    "description": "Used when one of known pre-python 2.5 ternary syntax is used.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1707",
+    "name": "trailing-comma-tuple",
+    "message": "Disallow trailing comma tuple",
+    "description": "In Python, a tuple is actually created by the comma symbol, not by the parentheses. Unfortunately, one can actually create a tuple by misplacing a trailing comma, which can lead to potential weird bugs in your code. You should always use parentheses explicitly for creating a tuple.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1708",
+    "name": "stop-iteration-return",
+    "message": "Do not raise StopIteration in generator, use return statement instead",
+    "description": "According to PEP479, the raise of StopIteration to end the loop of a generator may lead to hard to find bugs. This PEP specify that raise StopIteration has to be replaced by a simple return statement",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1709",
+    "name": "simplify-boolean-expression",
+    "message": "Boolean expression may be simplified to %s",
+    "description": "Emitted when redundant pre-python 2.5 ternary syntax is used.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1710",
+    "name": "inconsistent-return-statements",
+    "message": "Either all return statements in a function should return an expression, or none of them should.",
+    "description": "According to PEP8, if any return statement returns an expression, any return statements where no value is returned should explicitly state this as return None, and an explicit return statement should be present at the end of the function (if reachable)",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1711",
+    "name": "useless-return",
+    "message": "Useless return at end of function or method",
+    "description": "Emitted when a single \"return\" or \"return None\" statement is found at the end of function or method definition. This statement can safely be removed because Python will implicitly return None",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1712",
+    "name": "consider-swap-variables",
+    "message": "Consider using tuple unpacking for swapping variables",
+    "description": "You do not have to use a temporary variable in order to swap variables. Using \"tuple unpacking\" to directly swap variables makes the intention more clear.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1713",
+    "name": "consider-using-join",
+    "message": "Consider using str.join(sequence) for concatenating strings from an iterable",
+    "description": "Using str.join(sequence) is faster, uses less memory and increases readability compared to for-loop iteration.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1714",
+    "name": "consider-using-in",
+    "message": "Consider merging these comparisons with \"in\" to %r",
+    "description": "To check if a variable is equal to one of many values,combine the values into a tuple and check if the variable is contained \"in\" it instead of checking for equality against each of the values.This is faster and less verbose.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1715",
+    "name": "consider-using-get",
+    "message": "Consider using dict.get for getting values from a dict if a key is present or a default if not",
+    "description": "Using the builtin dict.get for getting a value from a dictionary if a key is present or a default if not, is simpler and considered more idiomatic, although sometimes a bit slower",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1716",
+    "name": "chained-comparison",
+    "message": "Simplify chained comparison between the operands",
+    "description": "This message is emitted when pylint encounters boolean operation like\"a < b and b < c\", suggesting instead to refactor it to \"a < b < c\"",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1717",
+    "name": "consider-using-dict-comprehension",
+    "message": "Consider using a dictionary comprehension",
+    "description": "Emitted when we detect the creation of a dictionary using the dict() callable and a transient list. Although there is nothing syntactically wrong with this code, it is hard to read and can be simplified to a dict comprehension.Also it is faster since you don't need to create another transient list",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1718",
+    "name": "consider-using-set-comprehension",
+    "message": "Consider using a set comprehension",
+    "description": "Although there is nothing syntactically wrong with this code, it is hard to read and can be simplified to a set comprehension.Also it is faster since you don't need to create another transient list",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1719",
+    "name": "simplifiable-if-expression",
+    "message": "The if expression can be replaced with %s",
+    "description": "Used when an if expression can be replaced with 'bool(test)'.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1720",
+    "name": "no-else-raise",
+    "message": "Unnecessary \"%s\" after \"raise\"",
+    "description": "Used in order to highlight an unnecessary block of code following an if containing a raise statement. As such, it will warn when it encounters an else following a chain of ifs, all of them containing a raise statement.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1721",
+    "name": "unnecessary-comprehension",
+    "message": "Unnecessary use of a comprehension",
+    "description": "Instead of using an identitiy comprehension, consider using the list, dict or set constructor. It is faster and simpler.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1722",
+    "name": "consider-using-sys-exit",
+    "message": "Consider using sys.exit()",
+    "description": "Instead of using exit() or quit(), consider using the sys.exit().",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1723",
+    "name": "no-else-break",
+    "message": "Unnecessary \"%s\" after \"break\"",
+    "description": "Used in order to highlight an unnecessary block of code following an if containing a break statement. As such, it will warn when it encounters an else following a chain of ifs, all of them containing a break statement.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "R1724",
+    "name": "no-else-continue",
+    "message": "Unnecessary \"%s\" after \"continue\"",
+    "description": "Used in order to highlight an unnecessary block of code following an if containing a continue statement. As such, it will warn when it encounters an else following a chain of ifs, all of them containing a continue statement.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0101",
+    "name": "unreachable",
+    "message": "Unreachable code",
+    "description": "Used when there is some code behind a \"return\" or \"raise\" statement, which will never be accessed.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0102",
+    "name": "dangerous-default-value",
+    "message": "Dangerous default value %s as argument",
+    "description": "Used when a mutable value as list or dictionary is detected in a default value for an argument.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0104",
+    "name": "pointless-statement",
+    "message": "Statement seems to have no effect",
+    "description": "Used when a statement doesn't have (or at least seems to) any effect.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0105",
+    "name": "pointless-string-statement",
+    "message": "String statement has no effect",
+    "description": "Used when a string is used as a statement (which of course has no effect). This is a particular case of W0104 with its own message so you can easily disable it if you're using those strings as documentation, instead of comments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0106",
+    "name": "expression-not-assigned",
+    "message": "Expression \"%s\" is assigned to nothing",
+    "description": "Used when an expression that is not a function call is assigned to nothing. Probably something else was intended.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0107",
+    "name": "unnecessary-pass",
+    "message": "Unnecessary pass statement",
+    "description": "Used when a \"pass\" statement that can be avoided is encountered.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0108",
+    "name": "unnecessary-lambda",
+    "message": "Lambda may not be necessary",
+    "description": "Used when the body of a lambda expression is a function call on the same argument list as the lambda itself; such lambda expressions are in all but a few cases replaceable with the function being called in the body of the lambda.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0109",
+    "name": "duplicate-key",
+    "message": "Duplicate key %r in dictionary",
+    "description": "Used when a dictionary expression binds the same key multiple times.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0111",
+    "name": "assign-to-new-keyword",
+    "message": "Name %s will become a keyword in Python %s",
+    "description": "Used when assignment will become invalid in future Python release due to introducing new keyword.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0120",
+    "name": "useless-else-on-loop",
+    "message": "Else clause on loop without a break statement",
+    "description": "Loops should only have an else clause if they can exit early with a break statement, otherwise the statements under else should be on the same scope as the loop itself.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0122",
+    "name": "exec-used",
+    "message": "Use of exec",
+    "description": "Used when you use the \"exec\" statement (function for Python 3), to discourage its usage. That doesn't mean you cannot use it !",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0123",
+    "name": "eval-used",
+    "message": "Use of eval",
+    "description": "Used when you use the \"eval\" function, to discourage its usage. Consider using `ast.literal_eval` for safely evaluating strings containing Python expressions from untrusted sources.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0124",
+    "name": "confusing-with-statement",
+    "message": "Following \"as\" with another context manager looks like a tuple.",
+    "description": "Emitted when a `with` statement component returns multiple values and uses name binding with `as` only for a part of those values, as in with ctx() as a, b. This can be misleading, since it's not clear if the context manager returns a tuple or if the node without a name binding is another context manager.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0125",
+    "name": "using-constant-test",
+    "message": "Using a conditional statement with a constant value",
+    "description": "Emitted when a conditional statement (If or ternary if) uses a constant value for its test. This might not be what the user intended to do.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0126",
+    "name": "missing-parentheses-for-call-in-test",
+    "message": "Using a conditional statement with potentially wrong function or method call due to missing parentheses",
+    "description": "Emitted when a conditional statement (If or ternary if) seems to wrongly call a function due to missing parentheses",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0127",
+    "name": "self-assigning-variable",
+    "message": "Assigning the same variable %r to itself",
+    "description": "Emitted when we detect that a variable is assigned to itself",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0128",
+    "name": "redeclared-assigned-name",
+    "message": "Redeclared variable %r in assignment",
+    "description": "Emitted when we detect that a variable was redeclared in the same assignment.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0143",
+    "name": "comparison-with-callable",
+    "message": "Comparing against a callable, did you omit the parenthesis?",
+    "description": "This message is emitted when pylint detects that a comparison with a callable was made, which might suggest that some parenthesis were omitted, resulting in potential unwanted behaviour.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0150",
+    "name": "lost-exception",
+    "message": "%s statement in finally block may swallow exception",
+    "description": "Used when a break or a return statement is found inside the finally clause of a try...finally block: the exceptions raised in the try clause will be silently swallowed instead of being re-raised.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0199",
+    "name": "assert-on-tuple",
+    "message": "Assert called on a 2-item-tuple. Did you mean 'assert x,y'?",
+    "description": "A call of assert on a tuple will always evaluate to true if the tuple is not empty, and will always evaluate to false if it is.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0201",
+    "name": "attribute-defined-outside-init",
+    "message": "Attribute %r defined outside __init__",
+    "description": "Used when an instance attribute is defined outside the __init__ method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0211",
+    "name": "bad-staticmethod-argument",
+    "message": "Static method with %r as first argument",
+    "description": "Used when a static method has \"self\" or a value specified in valid- classmethod-first-arg option or valid-metaclass-classmethod-first-arg option as first argument.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0212",
+    "name": "protected-access",
+    "message": "Access to a protected member %s of a client class",
+    "description": "Used when a protected member (i.e. class member with a name beginning with an underscore) is access outside the class or a descendant of the class where it's defined.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0221",
+    "name": "arguments-differ",
+    "message": "Parameters differ from %s %r method",
+    "description": "Used when a method has a different number of arguments than in the implemented interface or in an overridden method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0222",
+    "name": "signature-differs",
+    "message": "Signature differs from %s %r method",
+    "description": "Used when a method signature is different than in the implemented interface or in an overridden method.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0223",
+    "name": "abstract-method",
+    "message": "Method %r is abstract in class %r but is not overridden",
+    "description": "Used when an abstract method (i.e. raise NotImplementedError) is not overridden in concrete class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0231",
+    "name": "super-init-not-called",
+    "message": "__init__ method from base class %r is not called",
+    "description": "Used when an ancestor class method has an __init__ method which is not called by a derived class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0232",
+    "name": "no-init",
+    "message": "Class has no __init__ method",
+    "description": "Used when a class has no __init__ method, neither its parent classes.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0233",
+    "name": "non-parent-init-called",
+    "message": "__init__ method from a non direct base class %r is called",
+    "description": "Used when an __init__ method is called on a class which is not in the direct ancestors for the analysed class.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0235",
+    "name": "useless-super-delegation",
+    "message": "Useless super delegation in method %r",
+    "description": "Used whenever we can detect that an overridden method is useless, relying on super() delegation to do the same thing as another method from the MRO.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0236",
+    "name": "invalid-overridden-method",
+    "message": "Method %r was expected to be %r, found it instead as %r",
+    "description": "Used when we detect that a method was overridden as a property or the other way around, which could result in potential bugs at runtime.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0301",
+    "name": "unnecessary-semicolon",
+    "message": "Unnecessary semicolon",
+    "description": "Used when a statement is ended by a semi-colon (\";\"), which isn't necessary (that's python, not C ;).",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0311",
+    "name": "bad-indentation",
+    "message": "Bad indentation. Found %s %s, expected %s",
+    "description": "Used when an unexpected number of indentation's tabulations or spaces has been found.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0312",
+    "name": "mixed-indentation",
+    "message": "Found indentation with %ss instead of %ss",
+    "description": "Used when there are some mixed tabs and spaces in a module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0401",
+    "name": "wildcard-import",
+    "message": "Wildcard import %s",
+    "description": "Used when `from module import *` is detected.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0402",
+    "name": "deprecated-module",
+    "message": "Uses of a deprecated module %r",
+    "description": "Used a module marked as deprecated is imported.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0404",
+    "name": "reimported",
+    "message": "Reimport %r (imported line %s)",
+    "description": "Used when a module is reimported multiple times.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0406",
+    "name": "import-self",
+    "message": "Module import itself",
+    "description": "Used when a module is importing itself.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0407",
+    "name": "preferred-module",
+    "message": "Prefer importing %r instead of %r",
+    "description": "Used when a module imported has a preferred replacement module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0410",
+    "name": "misplaced-future",
+    "message": "__future__ import is not the first non docstring statement",
+    "description": "Python 2.5 and greater require __future__ import to be the first non docstring statement in the module.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0511",
+    "name": "fixme",
+    "message": null,
+    "description": "Used when a warning note as FIXME or XXX is detected.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0601",
+    "name": "global-variable-undefined",
+    "message": "Global variable %r undefined at the module level",
+    "description": "Used when a variable is defined through the \"global\" statement but the variable is not defined in the module scope.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0602",
+    "name": "global-variable-not-assigned",
+    "message": "Using global for %r but no assignment is done",
+    "description": "Used when a variable is defined through the \"global\" statement but no assignment to this variable is done.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0603",
+    "name": "global-statement",
+    "message": "Using the global statement",
+    "description": "Used when you use the \"global\" statement to update a global variable. Pylint just try to discourage this usage. That doesn't mean you cannot use it !",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0604",
+    "name": "global-at-module-level",
+    "message": "Using the global statement at the module level",
+    "description": "Used when you use the \"global\" statement at the module level since it has no effect",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0611",
+    "name": "unused-import",
+    "message": "Unused %s",
+    "description": "Used when an imported module or variable is not used.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0612",
+    "name": "unused-variable",
+    "message": "Unused variable %r",
+    "description": "Used when a variable is defined but not used.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0613",
+    "name": "unused-argument",
+    "message": "Unused argument %r",
+    "description": "Used when a function or method argument is not used.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0614",
+    "name": "unused-wildcard-import",
+    "message": "Unused import %s from wildcard import",
+    "description": "Used when an imported module or variable is not used from a `'from X import *'` style import.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0621",
+    "name": "redefined-outer-name",
+    "message": "Redefining name %r from outer scope (line %s)",
+    "description": "Used when a variable's name hides a name defined in the outer scope.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0622",
+    "name": "redefined-builtin",
+    "message": "Redefining built-in %r",
+    "description": "Used when a variable or function override a built-in.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0623",
+    "name": "redefine-in-handler",
+    "message": "Redefining name %r from %s in exception handler",
+    "description": "Used when an exception handler assigns the exception to an existing name",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0631",
+    "name": "undefined-loop-variable",
+    "message": "Using possibly undefined loop variable %r",
+    "description": "Used when a loop variable (i.e. defined by a for loop or a list comprehension or a generator expression) is used outside the loop.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0632",
+    "name": "unbalanced-tuple-unpacking",
+    "message": "Possible unbalanced tuple unpacking with sequence%s: left side has %d label(s), right side has %d value(s)",
+    "description": "Used when there is an unbalanced tuple unpacking in assignment",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0640",
+    "name": "cell-var-from-loop",
+    "message": "Cell variable %s defined in loop",
+    "description": "A variable used in a closure is defined in a loop. This will result in all closures using the same value for the closed-over variable.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0641",
+    "name": "possibly-unused-variable",
+    "message": "Possibly unused variable %r",
+    "description": "Used when a variable is defined but might not be used. The possibility comes from the fact that locals() might be used, which could consume or not the said variable",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0642",
+    "name": "self-cls-assignment",
+    "message": "Invalid assignment to %s in method",
+    "description": "Invalid assignment to self or cls in instance or class method respectively.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0702",
+    "name": "bare-except",
+    "message": "No exception type(s) specified",
+    "description": "Used when an except clause doesn't specify exceptions type to catch.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0703",
+    "name": "broad-except",
+    "message": "Catching too general exception %s",
+    "description": "Used when an except catches a too general exception, possibly burying unrelated errors.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0705",
+    "name": "duplicate-except",
+    "message": "Catching previously caught exception type %s",
+    "description": "Used when an except catches a type that was already caught by a previous handler.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0706",
+    "name": "try-except-raise",
+    "message": "The except handler raises immediately",
+    "description": "Used when an except handler uses raise as its first or only operator. This is useless because it raises back the exception immediately. Remove the raise operator or the entire try-except-raise block!",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0711",
+    "name": "binary-op-exception",
+    "message": "Exception to catch is the result of a binary \"%s\" operation",
+    "description": "Used when the exception to catch is of the form \"except A or B:\". If intending to catch multiple, rewrite as \"except (A, B):\"",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0715",
+    "name": "raising-format-tuple",
+    "message": "Exception arguments suggest string formatting might be intended",
+    "description": "Used when passing multiple arguments to an exception constructor, the first of them a string literal containing what appears to be placeholders intended for formatting",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W0716",
+    "name": "wrong-exception-operation",
+    "message": "Invalid exception operation. %s",
+    "description": "Used when an operation is done against an exception, but the operation is not valid for the exception in question. Usually emitted when having binary operations between exceptions in except handlers.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1113",
+    "name": "keyword-arg-before-vararg",
+    "message": "Keyword argument before variable positional arguments list in the definition of %s function",
+    "description": "When defining a keyword argument before variable positional arguments, one can end up in having multiple values passed for the aforementioned parameter in case the method is called with keyword arguments.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1114",
+    "name": "arguments-out-of-order",
+    "message": "Positional arguments appear to be out of order",
+    "description": "Emitted when the caller's argument names fully match the parameter names in the function signature but do not have the same order.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1201",
+    "name": "logging-not-lazy",
+    "message": "Specify string format arguments as logging function parameters",
+    "description": "Used when a logging statement has a call form of \"logging.<logging method>(format_string % (format_args...))\". Such calls should leave string interpolation to the logging method itself and be written \"logging.<logging method>(format_string, format_args...)\" so that the program may avoid incurring the cost of the interpolation in those cases in which no message will be logged. For more, see http://www.python.org/dev/peps/pep-0282/.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1202",
+    "name": "logging-format-interpolation",
+    "message": "Use %s formatting in logging functions%s",
+    "description": "Used when a logging statement has a call form of \"logging.<logging method>(<string formatting>)\". with invalid string formatting. Use another way for format the string instead.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1300",
+    "name": "bad-format-string-key",
+    "message": "Format string dictionary key should be a string, not %s",
+    "description": "Used when a format string that uses named conversion specifiers is used with a dictionary whose keys are not all strings.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1301",
+    "name": "unused-format-string-key",
+    "message": "Unused key %r in format string dictionary",
+    "description": "Used when a format string that uses named conversion specifiers is used with a dictionary that contains keys not required by the format string.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1302",
+    "name": "bad-format-string",
+    "message": "Invalid format string",
+    "description": "Used when a PEP 3101 format string is invalid.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1303",
+    "name": "missing-format-argument-key",
+    "message": "Missing keyword argument %r for format string",
+    "description": "Used when a PEP 3101 format string that uses named fields doesn't receive one or more required keywords.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1304",
+    "name": "unused-format-string-argument",
+    "message": "Unused format argument %r",
+    "description": "Used when a PEP 3101 format string that uses named fields is used with an argument that is not required by the format string.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1305",
+    "name": "format-combined-specification",
+    "message": "Format string contains both automatic field numbering and manual field specification",
+    "description": "Used when a PEP 3101 format string contains both automatic field numbering (e.g. '{}') and manual field specification (e.g. '{0}').",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1306",
+    "name": "missing-format-attribute",
+    "message": "Missing format attribute %r in format specifier %r",
+    "description": "Used when a PEP 3101 format string uses an attribute specifier ({0.length}), but the argument passed for formatting doesn't have that attribute.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1307",
+    "name": "invalid-format-index",
+    "message": "Using invalid lookup key %r in format specifier %r",
+    "description": "Used when a PEP 3101 format string uses a lookup specifier ({a[1]}), but the argument passed for formatting doesn't contain or doesn't have that key as an attribute.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1308",
+    "name": "duplicate-string-formatting-argument",
+    "message": "Duplicate string formatting argument %r, consider passing as named argument",
+    "description": "Used when we detect that a string formatting is repeating an argument instead of using named string arguments",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1401",
+    "name": "anomalous-backslash-in-string",
+    "message": "Anomalous backslash in string: '%s'. String constant might be missing an r prefix.",
+    "description": "Used when a backslash is in a literal string but not as an escape.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1402",
+    "name": "anomalous-unicode-escape-in-string",
+    "message": "Anomalous Unicode escape in byte string: '%s'. String constant might be missing an r or u prefix.",
+    "description": "Used when an escape like \\u is encountered in a byte string where it has no effect.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1403",
+    "name": "implicit-str-concat-in-sequence",
+    "message": "Implicit string concatenation found in %s",
+    "description": "String literals are implicitly concatenated in a literal iterable definition : maybe a comma is missing ?",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1501",
+    "name": "bad-open-mode",
+    "message": "\"%s\" is not a valid mode for open.",
+    "description": "Python supports: r, w, a[, x] modes with b, +, and U (only with r) options. See http://docs.python.org/2/library/functions.html#open",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1503",
+    "name": "redundant-unittest-assert",
+    "message": "Redundant use of %s with constant value %r",
+    "description": "The first argument of assertTrue and assertFalse is a condition. If a constant is passed as parameter, that condition will be always true. In this case a warning should be emitted.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1505",
+    "name": "deprecated-method",
+    "message": "Using deprecated method %s()",
+    "description": "The method is marked as deprecated and will be removed in a future version of Python. Consider looking for an alternative in the documentation.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1506",
+    "name": "bad-thread-instantiation",
+    "message": "threading.Thread needs the target function",
+    "description": "The warning is emitted when a threading.Thread class is instantiated without the target function being passed. By default, the first parameter is the group param, not the target param.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1507",
+    "name": "shallow-copy-environ",
+    "message": "Using copy.copy(os.environ). Use os.environ.copy() instead.",
+    "description": "os.environ is not a dict object but proxy object, so shallow copy has still effects on original object. See https://bugs.python.org/issue15373 for reference.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1508",
+    "name": "invalid-envvar-default",
+    "message": "%s default type is %s. Expected str or None.",
+    "description": "Env manipulation functions return None or str values. Supplying anything different as a default may cause bugs. See https://docs.python.org/3/library/os.html#os.getenv.",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1509",
+    "name": "subprocess-popen-preexec-fn",
+    "message": "Using preexec_fn keyword which may be unsafe in the presence of threads",
+    "description": "The preexec_fn parameter is not safe to use in the presence of threads in your application. The child process could deadlock before exec is called. If you must use it, keep it trivial! Minimize the number of libraries you call into.https://docs.python.org/3/library/subprocess.html#popen-constructor",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1510",
+    "name": "subprocess-run-check",
+    "message": "Using subprocess.run without explicitly set `check` is not recommended.",
+    "description": "The check parameter should always be used with explicitly set `check` keyword to make clear what the error-handling behavior is.https://docs.python.org/3/library/subprocess.html#subprocess.runs",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1601",
+    "name": "apply-builtin",
+    "message": "apply built-in referenced",
+    "description": "Used when the apply built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1602",
+    "name": "basestring-builtin",
+    "message": "basestring built-in referenced",
+    "description": "Used when the basestring built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1603",
+    "name": "buffer-builtin",
+    "message": "buffer built-in referenced",
+    "description": "Used when the buffer built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1604",
+    "name": "cmp-builtin",
+    "message": "cmp built-in referenced",
+    "description": "Used when the cmp built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1605",
+    "name": "coerce-builtin",
+    "message": "coerce built-in referenced",
+    "description": "Used when the coerce built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1606",
+    "name": "execfile-builtin",
+    "message": "execfile built-in referenced",
+    "description": "Used when the execfile built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1607",
+    "name": "file-builtin",
+    "message": "file built-in referenced",
+    "description": "Used when the file built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1608",
+    "name": "long-builtin",
+    "message": "long built-in referenced",
+    "description": "Used when the long built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1609",
+    "name": "raw_input-builtin",
+    "message": "raw_input built-in referenced",
+    "description": "Used when the raw_input built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1610",
+    "name": "reduce-builtin",
+    "message": "reduce built-in referenced",
+    "description": "Used when the reduce built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1611",
+    "name": "standarderror-builtin",
+    "message": "StandardError built-in referenced",
+    "description": "Used when the StandardError built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1612",
+    "name": "unicode-builtin",
+    "message": "unicode built-in referenced",
+    "description": "Used when the unicode built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1613",
+    "name": "xrange-builtin",
+    "message": "xrange built-in referenced",
+    "description": "Used when the xrange built-in function is referenced (missing from Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1614",
+    "name": "coerce-method",
+    "message": "__coerce__ method defined",
+    "description": "Used when a __coerce__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1615",
+    "name": "delslice-method",
+    "message": "__delslice__ method defined",
+    "description": "Used when a __delslice__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1616",
+    "name": "getslice-method",
+    "message": "__getslice__ method defined",
+    "description": "Used when a __getslice__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1617",
+    "name": "setslice-method",
+    "message": "__setslice__ method defined",
+    "description": "Used when a __setslice__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1618",
+    "name": "no-absolute-import",
+    "message": "import missing `from __future__ import absolute_import`",
+    "description": "Used when an import is not accompanied by ``from __future__ import absolute_import`` (default behaviour in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1619",
+    "name": "old-division",
+    "message": "division w/o __future__ statement",
+    "description": "Used for non-floor division w/o a float literal or ``from __future__ import division`` (Python 3 returns a float for int division unconditionally)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1620",
+    "name": "dict-iter-method",
+    "message": "Calling a dict.iter*() method",
+    "description": "Used for calls to dict.iterkeys(), itervalues() or iteritems() (Python 3 lacks these methods)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1621",
+    "name": "dict-view-method",
+    "message": "Calling a dict.view*() method",
+    "description": "Used for calls to dict.viewkeys(), viewvalues() or viewitems() (Python 3 lacks these methods)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1622",
+    "name": "next-method-called",
+    "message": "Called a next() method on an object",
+    "description": "Used when an object's next() method is called (Python 3 uses the next() built- in function)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1623",
+    "name": "metaclass-assignment",
+    "message": "Assigning to a class's __metaclass__ attribute",
+    "description": "Used when a metaclass is specified by assigning to __metaclass__ (Python 3 specifies the metaclass as a class statement argument)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1624",
+    "name": "indexing-exception",
+    "message": "Indexing exceptions will not work on Python 3",
+    "description": "Indexing exceptions will not work on Python 3. Use `exception.args[index]` instead.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1625",
+    "name": "raising-string",
+    "message": "Raising a string exception",
+    "description": "Used when a string exception is raised. This will not work on Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1626",
+    "name": "reload-builtin",
+    "message": "reload built-in referenced",
+    "description": "Used when the reload built-in function is referenced (missing from Python 3). You can use instead imp.reload or importlib.reload.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1627",
+    "name": "oct-method",
+    "message": "__oct__ method defined",
+    "description": "Used when an __oct__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1628",
+    "name": "hex-method",
+    "message": "__hex__ method defined",
+    "description": "Used when a __hex__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1629",
+    "name": "nonzero-method",
+    "message": "__nonzero__ method defined",
+    "description": "Used when a __nonzero__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1630",
+    "name": "cmp-method",
+    "message": "__cmp__ method defined",
+    "description": "Used when a __cmp__ method is defined (method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1632",
+    "name": "input-builtin",
+    "message": "input built-in referenced",
+    "description": "Used when the input built-in is referenced (backwards-incompatible semantics in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1633",
+    "name": "round-builtin",
+    "message": "round built-in referenced",
+    "description": "Used when the round built-in is referenced (backwards-incompatible semantics in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1634",
+    "name": "intern-builtin",
+    "message": "intern built-in referenced",
+    "description": "Used when the intern built-in is referenced (Moved to sys.intern in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1635",
+    "name": "unichr-builtin",
+    "message": "unichr built-in referenced",
+    "description": "Used when the unichr built-in is referenced (Use chr in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1636",
+    "name": "map-builtin-not-iterating",
+    "message": "map built-in referenced when not iterating",
+    "description": "Used when the map built-in is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1637",
+    "name": "zip-builtin-not-iterating",
+    "message": "zip built-in referenced when not iterating",
+    "description": "Used when the zip built-in is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1638",
+    "name": "range-builtin-not-iterating",
+    "message": "range built-in referenced when not iterating",
+    "description": "Used when the range built-in is referenced in a non-iterating context (returns a range in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1639",
+    "name": "filter-builtin-not-iterating",
+    "message": "filter built-in referenced when not iterating",
+    "description": "Used when the filter built-in is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1640",
+    "name": "using-cmp-argument",
+    "message": "Using the cmp argument for list.sort / sorted",
+    "description": "Using the cmp argument for list.sort or the sorted builtin should be avoided, since it was removed in Python 3. Using either `key` or `functools.cmp_to_key` should be preferred.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W1641",
+    "name": "eq-without-hash",
+    "message": "Implementing __eq__ without also implementing __hash__",
+    "description": "Used when a class implements __eq__ but not __hash__. In Python 2, objects get object.__hash__ as the default implementation, in Python 3 objects get None as their default __hash__ implementation if they also implement __eq__.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1642",
+    "name": "div-method",
+    "message": "__div__ method defined",
+    "description": "Used when a __div__ method is defined. Using `__truediv__` and setting__div__ = __truediv__ should be preferred.(method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1643",
+    "name": "idiv-method",
+    "message": "__idiv__ method defined",
+    "description": "Used when an __idiv__ method is defined. Using `__itruediv__` and setting__idiv__ = __itruediv__ should be preferred.(method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1644",
+    "name": "rdiv-method",
+    "message": "__rdiv__ method defined",
+    "description": "Used when a __rdiv__ method is defined. Using `__rtruediv__` and setting__rdiv__ = __rtruediv__ should be preferred.(method is not used by Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1645",
+    "name": "exception-message-attribute",
+    "message": "Exception.message removed in Python 3",
+    "description": "Used when the message attribute is accessed on an Exception. Use str(exception) instead.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1646",
+    "name": "invalid-str-codec",
+    "message": "non-text encoding used in str.decode",
+    "description": "Used when using str.encode or str.decode with a non-text encoding. Use codecs module to handle arbitrary codecs.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1647",
+    "name": "sys-max-int",
+    "message": "sys.maxint removed in Python 3",
+    "description": "Used when accessing sys.maxint. Use sys.maxsize instead.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1648",
+    "name": "bad-python3-import",
+    "message": "Module moved in Python 3",
+    "description": "Used when importing a module that no longer exists in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1649",
+    "name": "deprecated-string-function",
+    "message": "Accessing a deprecated function on the string module",
+    "description": "Used when accessing a string function that has been deprecated in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1650",
+    "name": "deprecated-str-translate-call",
+    "message": "Using str.translate with deprecated deletechars parameters",
+    "description": "Used when using the deprecated deletechars parameters from str.translate. Use re.sub to remove the desired characters",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1651",
+    "name": "deprecated-itertools-function",
+    "message": "Accessing a deprecated function on the itertools module",
+    "description": "Used when accessing a function on itertools that has been removed in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1652",
+    "name": "deprecated-types-field",
+    "message": "Accessing a deprecated fields on the types module",
+    "description": "Used when accessing a field on types that has been removed in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1653",
+    "name": "next-method-defined",
+    "message": "next method defined",
+    "description": "Used when a next method is defined that would be an iterator in Python 2 but is treated as a normal function in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1654",
+    "name": "dict-items-not-iterating",
+    "message": "dict.items referenced when not iterating",
+    "description": "Used when dict.items is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1655",
+    "name": "dict-keys-not-iterating",
+    "message": "dict.keys referenced when not iterating",
+    "description": "Used when dict.keys is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1656",
+    "name": "dict-values-not-iterating",
+    "message": "dict.values referenced when not iterating",
+    "description": "Used when dict.values is referenced in a non-iterating context (returns an iterator in Python 3)",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1657",
+    "name": "deprecated-operator-function",
+    "message": "Accessing a removed attribute on the operator module",
+    "description": "Used when accessing a field on operator module that has been removed in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1658",
+    "name": "deprecated-urllib-function",
+    "message": "Accessing a removed attribute on the urllib module",
+    "description": "Used when accessing a field on urllib module that has been removed or moved in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1659",
+    "name": "xreadlines-attribute",
+    "message": "Accessing a removed xreadlines attribute",
+    "description": "Used when accessing the xreadlines() function on a file stream, removed in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1660",
+    "name": "deprecated-sys-function",
+    "message": "Accessing a removed attribute on the sys module",
+    "description": "Used when accessing a field on sys module that has been removed in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1661",
+    "name": "exception-escape",
+    "message": "Using an exception object that was bound by an except handler",
+    "description": "Emitted when using an exception, that was bound in an except handler, outside of the except handler. On Python 3 these exceptions will be deleted once they get out of the except handler.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "W1662",
+    "name": "comprehension-escape",
+    "message": "Using a variable that was bound inside a comprehension",
+    "description": "Emitted when using a variable, that was bound in a comprehension handler, outside of the comprehension itself. On Python 3 these variables will be deleted outside of the comprehension.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": false
+  },
+  {
+    "code": "E1606",
+    "name": "long-suffix",
+    "message": "Use of long suffix",
+    "description": "Used when \"l\" or \"L\" is used to mark a long integer. This will not work in Python 3, since int and long types have merged. This message can\u2019t be emitted when using Python >= 3.0.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1607",
+    "name": "old-ne-operator",
+    "message": "Use of the <> operator",
+    "description": "Used when the deprecated \\<>\" operator is used instead of \"!=\". This is removed in Python 3. This message can\u2019t be emitted when using Python >= 3.0.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1608",
+    "name": "old-octal-literal",
+    "message": "Use of old octal literal",
+    "description": "Used when encountering the old octal syntax, removed in Python 3. To use the new syntax, prepend 0o on the number. This message can\u2019t be emitted when using Python >= 3.0.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1609",
+    "name": "import-star-module-level",
+    "message": "Import * only allowed at module level",
+    "description": "Used when the import star syntax is used somewhere else than the module level. This message can\u2019t be emitted when using Python >= 3.0.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "E1610",
+    "name": "non-ascii-bytes-literal",
+    "message": "Non-ascii bytes literals not supported in 3.x",
+    "description": "Used when non-ascii bytes literals are found in a program. They are no longer supported in Python 3.",
+    "disabled_by_default": true,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  },
+  {
+    "code": "W0331",
+    "name": "old-old-ne-operator",
+    "message": "Use of old old ne operator",
+    "description": "Deprecated and replaced bt E1607",
+    "disabled_by_default": false,
+    "enabled_by_default": false,
+    "deprecated_in_python_3": true
+  }
+]
